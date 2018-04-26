@@ -12,6 +12,6 @@ namespace PROburgEvents.Models
         [Required]
         public string Email { get; set; }
 
-        //public ICollection<Event> Events { get; set; } = new HashSet<Event>();
+        public ICollection<Event> Events { get; set; } = new HashSet<Event>();
     }
 }

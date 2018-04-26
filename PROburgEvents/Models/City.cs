@@ -10,6 +10,6 @@ namespace PROburgEvents.Models
         public int ID { get; set; }
         public string Name { get; set; }
 
-        //public ICollection<Event> Events { get; set; } = new HashSet<Event>();
+        public ICollection<Event> Events { get; set; } = new HashSet<Event>();
     }
 }

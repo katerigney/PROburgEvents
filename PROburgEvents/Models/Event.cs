@@ -12,16 +12,15 @@ namespace PROburgEvents.Models
         public string Tagline { get; set; }
         public string Description { get; set; }
         public string Address { get; set; }
-        public string City { get; set; }
         public string State { get; set; }
         public string ZIP { get; set; }
         public int? AgeLimit { get; set; }
         public decimal Price { get; set; }
         public DateTime Date { get; set; }
 
-        //public int CityID { get; set; }
-        //public City City { get; set; }
+        public int CityID { get; set; }
+        public City City { get; set; }
 
-        //public ICollection<Attendee> Attendees { get; set; } = new HashSet<Attendee>();
+        public ICollection<Attendee> Attendees { get; set; } = new HashSet<Attendee>();
     }
 }

@@ -202,6 +202,10 @@
     <Compile Include="Migrations\201804261848164_AddedEventsTable.Designer.cs">
       <DependentUpon>201804261848164_AddedEventsTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201804261853537_AddedRelationshipsBetweenTables.cs" />
+    <Compile Include="Migrations\201804261853537_AddedRelationshipsBetweenTables.Designer.cs">
+      <DependentUpon>201804261853537_AddedRelationshipsBetweenTables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Attendee.cs" />
     <Compile Include="Models\City.cs" />
@@ -285,6 +289,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804261848164_AddedEventsTable.resx">
       <DependentUpon>201804261848164_AddedEventsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201804261853537_AddedRelationshipsBetweenTables.resx">
+      <DependentUpon>201804261853537_AddedRelationshipsBetweenTables.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
