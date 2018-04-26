@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2015
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROburgEvents", "PROburgEvents\PROburgEvents.csproj", "{3EBC9569-AC69-4AB2-AFDA-9D47E99FBD50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EBC9569-AC69-4AB2-AFDA-9D47E99FBD50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EBC9569-AC69-4AB2-AFDA-9D47E99FBD50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EBC9569-AC69-4AB2-AFDA-9D47E99FBD50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EBC9569-AC69-4AB2-AFDA-9D47E99FBD50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BB975345-7189-4549-9BE9-9449C3077C94}
+	EndGlobalSection
+EndGlobal
