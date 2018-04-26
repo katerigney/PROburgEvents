@@ -14,11 +14,11 @@ namespace PROburgEvents.Controllers
     {
         public IEnumerable<Event> GetAllEvents()
         {
+
+            //use ViewModel
             var db = new DataContext();
             var query = db.Events
-                .Include(i => i.Attendees)
-                //self-referencing loop
-                ;
+                .Include(i => i.Attendees);
             return query.ToList();
         }
     }
