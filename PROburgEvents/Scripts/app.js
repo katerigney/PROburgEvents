@@ -14,3 +14,22 @@ eventsApp.config(function ($routeProvider) {
 
     $routeProvider.otherwise({ redirectTo: "/events" });
 })
+
+app.controller("eventProfileController", ["$scope", "$routeParams", "$http",
+    function ($scope, $routeParams, $http) {
+        $http({
+            method: "GET",
+            url: "/api/events/" + $routeParams.eventID
+        }).then(resp => {
+            $scope.event = resp.data;
+        })
+    }])
+
+app.controller("eventsContoller", ["$scope", "$http", function ($scope, $http) {
+    $http({
+        method: "GET",
+        url: "/api/events"
+    }).then(resp => {
+        $scope.events = resp.data
+    })
+}])
