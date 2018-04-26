@@ -18,7 +18,7 @@ namespace PROburgEvents.Models
         public decimal Price { get; set; }
         public DateTime Date { get; set; }
 
-        public int CityID { get; set; }
+        public int? CityID { get; set; }
         public City City { get; set; }
 
         public ICollection<Attendee> Attendees { get; set; } = new HashSet<Attendee>();
