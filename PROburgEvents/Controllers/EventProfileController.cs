@@ -1,4 +1,6 @@
-﻿using System;
+﻿using PROburgEvents.Data;
+using PROburgEvents.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -9,6 +11,7 @@ namespace PROburgEvents.Controllers
 {
     public class EventProfileController : ApiController
     {
+        [HttpGet]
         public Event GetOneEvent(int eventID)
         {
             var db = new DataContext();

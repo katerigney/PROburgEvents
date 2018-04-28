@@ -24,12 +24,24 @@ namespace PROburgEvents.Controllers
             return query.ToList();
         }
 
-        public Event GetOneEvent(int eventID)
+        [HttpGet]
+        public IHttpActionResult GetOneEvent(int id)
         {
-            var db = new DataContext();
-            var query = db.Events.SingleOrDefault(w => w.ID == eventID);
-
-            return query;
+            using (var db = new DataContext())
+            {
+                var query = db.Events
+                    .Include(i => i.Attendees)
+                    .Include(i => i.City)
+                    .SingleOrDefault(s => s.ID == id);
+                if (query == null)
+                {
+                    return NotFound();
+                }
+                else
+                {
+                    return Ok(query);
+                }
+            }
         }
     }
 }
