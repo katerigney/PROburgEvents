@@ -28,9 +28,8 @@ eventsApp.controller("eventProfileController", ["$scope", "$routeParams", "$http
     }])
 
 eventsApp.controller("eventsContoller", ["$scope", "$http", function ($scope, $http) {
-    $scope.pageTitle = "PROburg Events Page"
 
-    $scope.searchForEvent = () => {
+    const getEvents = () => {
         let searchURL = "/api/events";
         if ($scope.searchQuery) {
             searchURL = searchURL + "?title=" + $scope.searchQuery
@@ -42,5 +41,15 @@ eventsApp.controller("eventsContoller", ["$scope", "$http", function ($scope, $h
             console.log(resp.data);
             $scope.events = resp.data;
         })
-    }   
+    }
+
+    $scope.searchForEvent = () => {
+        getEvents();
+    }  
+    var start = () => {
+        $scope.pageTitle = "PROburg Events Page"
+        getEvents();
+    }
+
+    start();
 }])
