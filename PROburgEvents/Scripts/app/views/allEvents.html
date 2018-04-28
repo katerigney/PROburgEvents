@@ -1,12 +1,13 @@
-﻿<div style="background:#6ff686 !important" class="jumbotron">
-    <h1> PROburg Events Page</h1>
-    <div ng-repeat="event in events track by $index">
-        <h1>
-            <a href="#!/events/{{event.Id}}">{{event.Title}}</a>
-        </h1>
-        <p>{{event.Tagline}} </p>
-        <p>{{event.Date}}</p>
-        <p>{{event.City}}</p>
-
+﻿<div>
+    <div style="background:#6ff686 !important" class="jumbotron">
+        <h1> PROburg Events Page</h1>
     </div>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="event in events track by $index">
+            <h1>
+                <a href="#!/events/{{event.Id}}">{{event.Title}}</a>
+            </h1>
+            <p>{{event.Tagline}} | {{event.Date}} | {{event.City.Name}}</p>
+        </li>
+    </ul>
 </div>
