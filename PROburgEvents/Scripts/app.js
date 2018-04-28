@@ -29,6 +29,10 @@ eventsApp.controller("eventProfileController", ["$scope", "$routeParams", "$http
 
 eventsApp.controller("eventsContoller", ["$scope", "$http", function ($scope, $http) {
 
+    $scope.addAttendee = () => {
+        //add put method with user email data
+    }
+
     const getEvents = () => {
         let searchURL = "/api/events";
         if ($scope.searchQuery) {

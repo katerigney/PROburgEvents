@@ -8,10 +8,9 @@
     </div>
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="event in events track by $index">
-            <h1>
-                <a href="#!/events/{{event.ID}}">{{event.Title}}</a>
-            </h1>
-            <p>{{event.Tagline}} | {{event.Date}} | {{event.City.Name}}</p>
+            <h1><a href="#!/events/{{event.ID}}">{{event.Title}}</a></h1>
+            <h4>{{event.Tagline}}</h4>
+            <p>{{event.Date | date:'longDate'}} | {{event.City.Name}}</p>
         </li>
     </ul>
 </div>
