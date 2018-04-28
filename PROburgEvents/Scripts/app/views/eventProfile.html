@@ -1,0 +1,8 @@
+﻿<div class="jumbotron">
+    <h1>{{event.Title}}<span class="badge badge-secondary">{{event.Price}}</span></h1>
+    <h3>{{event.Date}} | {{event.Address}},{{event.City.Name}},{{event.State}} {{event.ZIP}}</h3>
+    <p>{{event.Description}}</p>
+    <ul class="list-group">
+        <li class="list-group-item" ng-repeat="attendee in event.Attendees">{{attendee.Email}}</li>
+    </ul>
+</div>

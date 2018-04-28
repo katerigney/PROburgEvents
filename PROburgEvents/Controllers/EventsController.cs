@@ -13,7 +13,7 @@ namespace PROburgEvents.Controllers
 {
     public class EventsController : ApiController
     {
-        public IEnumerable<Event> GetAllEvents()
+      public IEnumerable<Event> GetAllEvents()
         {
             //use ViewModel to return data?
             var db = new DataContext();
@@ -22,6 +22,14 @@ namespace PROburgEvents.Controllers
                 .Include(i => i.City);
             
             return query.ToList();
+        }
+
+        public Event GetOneEvent(int eventID)
+        {
+            var db = new DataContext();
+            var query = db.Events.SingleOrDefault(w => w.ID == eventID);
+
+            return query;
         }
     }
 }

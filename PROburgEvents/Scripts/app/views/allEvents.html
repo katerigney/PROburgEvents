@@ -1,11 +1,11 @@
 ﻿<div>
-    <div style="background:#6ff686 !important" class="jumbotron">
+    <div class="jumbotron">
         <h1> PROburg Events Page</h1>
     </div>
     <ul class="list-group">
         <li class="list-group-item" ng-repeat="event in events track by $index">
             <h1>
-                <a href="#!/events/{{event.Id}}">{{event.Title}}</a>
+                <a href="#!/events/{{event.ID}}">{{event.Title}}</a>
             </h1>
             <p>{{event.Tagline}} | {{event.Date}} | {{event.City.Name}}</p>
         </li>

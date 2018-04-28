@@ -17,10 +17,12 @@ eventsApp.config(function ($routeProvider) {
 
 eventsApp.controller("eventProfileController", ["$scope", "$routeParams", "$http",
     function ($scope, $routeParams, $http) {
+        console.log($routeParams);
         $http({
             method: "GET",
             url: "/api/events/" + $routeParams.eventID
         }).then(resp => {
+            console.log(resp);
             $scope.event = resp.data;
         })
     }])
