@@ -15,8 +15,7 @@ namespace PROburgEvents.Controllers
     {
         public IEnumerable<Event> GetAllEvents()
         {
-
-            //use ViewModel to return data
+            //use ViewModel to return data?
             var db = new DataContext();
             var query = db.Events
                 .Include(i => i.Attendees);

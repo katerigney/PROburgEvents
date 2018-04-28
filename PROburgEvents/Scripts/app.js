@@ -3,7 +3,7 @@
 eventsApp.config(function ($routeProvider) {
 
     $routeProvider.when("/events", {
-        templateUrl: "/Scripts/app/views/events.html",
+        templateUrl: "/Scripts/app/views/allEvents.html",
         controller: "eventsContoller"
     })
 
@@ -15,7 +15,7 @@ eventsApp.config(function ($routeProvider) {
     $routeProvider.otherwise({ redirectTo: "/events" });
 })
 
-app.controller("eventProfileController", ["$scope", "$routeParams", "$http",
+eventsApp.controller("eventProfileController", ["$scope", "$routeParams", "$http",
     function ($scope, $routeParams, $http) {
         $http({
             method: "GET",
@@ -25,7 +25,7 @@ app.controller("eventProfileController", ["$scope", "$routeParams", "$http",
         })
     }])
 
-app.controller("eventsContoller", ["$scope", "$http", function ($scope, $http) {
+eventsApp.controller("eventsContoller", ["$scope", "$http", function ($scope, $http) {
     $http({
         method: "GET",
         url: "/api/events"
