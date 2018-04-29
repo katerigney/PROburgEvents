@@ -24,7 +24,22 @@ eventsApp.controller("eventProfileController", ["$scope", "$routeParams", "$http
         }).then(resp => {
             console.log(resp);
             $scope.event = resp.data;
-        })
+            })
+
+        $scope.addAttendee = function (event) {
+            console.log("button was clicked");
+            $http({
+                method: "PUT",
+                url: "/api/events/" + event.ID + "/AddAttendee/",
+                data: {
+                    Email: $scope.attendeeEmail
+                }
+            }).then(resp => {
+                console.log(resp.data);
+                $scope.respMessage = resp.data;
+            })
+        }
+
     }])
 
 eventsApp.controller("eventsContoller", ["$scope", "$http", function ($scope, $http) {
@@ -48,20 +63,6 @@ eventsApp.controller("eventsContoller", ["$scope", "$http", function ($scope, $h
     $scope.searchForEvent = () => {
         getEvents();
     }  
-
-    $scope.addAttendee = (event) => {
-        console.log("button was clicked");
-        $http({
-            method: "PUT",
-            url: "/api/events/" + eventID + "/AddAttendee/",
-            data: {
-                Email: $scope.attendeeEmail
-            }
-        }).then(resp => {
-            console.log(resp.data);
-            $scope.respMessage = resp.data;
-        })
-    }
 
     var start = () => {
         $scope.pageTitle = "PROburg Events Page"

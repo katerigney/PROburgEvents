@@ -35,7 +35,7 @@ namespace PROburgEvents.Controllers
                 message = $"You have registered for {thisEvent.Title} taking place on {thisEvent.Date.ToString("MM/dd/yyyy")}.";
             } else
             {
-                message = $"Cannot register {userEmail} for {thisEvent}. Please try again.";
+                message = $"You cannot register for {thisEvent.Title} without a valid email. Please try again.";
             }
             //return resp message
             return message;
