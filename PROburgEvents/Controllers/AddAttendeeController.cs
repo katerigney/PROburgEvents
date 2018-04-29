@@ -37,7 +37,7 @@ namespace PROburgEvents.Controllers
             {
                 message = $"Cannot register {userEmail} for {thisEvent}. Please try again.";
             }
-            //return confirmation message
+            //return resp message
             return message;
         }
     }

@@ -9,6 +9,7 @@
     <form>
         <!--Add logic that button is disabled until email entered-->
         <input type="text" ng-model="attendeeEmail" placeholder="Enter your email">
-        <button type="submit" class="btn btn-primary" ng-click="addAttendee()">Join the event</button>
+        <button type="submit" class="btn btn-default" ng-click="addAttendee(event)">Join the event</button>
     </form>
+    <p>{{respMessage}}</p><!--PUT THIS IN AN ALERT-->
 </div>
